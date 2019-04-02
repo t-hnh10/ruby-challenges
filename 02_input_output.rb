@@ -3,17 +3,17 @@
 
 # Program is run and outputs:
 # "What is your name?"
-
+puts "What is your name?"
 # User inputs: "Tom"
-
+name = gets.chomp.capitalize
 # Program outputs:
 # "Hi Tom! How old are you?"
-
+puts "Hi #{name}! How old are you?"
 # User inputs: 40
-
+age = gets.chomp.to_i
 # Program outputs:
 # "Wow! You are 40 years old. Congratulations!"
-
+puts "Wow! You are #{age} years old. Congratulations!"
 # Beast mode challenge:
 # Ater the above, the program calculates how many years until
 # the user is 100 years old and tells the user. For example, for
