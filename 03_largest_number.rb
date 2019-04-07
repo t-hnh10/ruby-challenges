@@ -35,4 +35,4 @@ def largest_number (number_1, number_2)
 end
 
 largest_number(100,50)
-largest_number 
+largest_number(70,20)
