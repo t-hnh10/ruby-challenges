@@ -60,7 +60,7 @@
 #   Print the total price
 
 class Ordering
-    attr_accessor :item, :qty_ordered, :qty_num
+    attr_reader :item, :qty_ordered, :qty_num, :qty_total
     
     def initialize(item, qty_total, sell_price, make_price)
         @item = item
@@ -81,9 +81,14 @@ class Ordering
     end
 
     # Keep the quantity of items updated
-    def add_qty(qty_num)
-        @qty_ordered += qty_num
-        @qty_total += qty_num
+    def add_qty(num)
+        @qty_ordered += num
+        @qty_total += num
+    end
+
+    # Defining method to calculate total
+    def calc_total
+        @sell_price + @qty_ordered
     end
 
     # Defining method to calculate profit
@@ -119,6 +124,7 @@ puts "What would you like to order (latte, scone, tea)? Type (q)uit to quit."
 order = gets.chomp.downcase
     if order == "q"
         puts "Thank you! Your order: #{$qty_ordered} #{$item}." # Does not work
+        puts "Total cost: $#{'%.2f' % (($latte.calc_total)+($scone.calc_total)+($tea.calc_total)).to_s}"
         puts "Total profit: $#{$latte.calc_profit} for lattes, $#{$scone.calc_profit} for scones & $#{$tea.calc_profit} for tea."
         abort
     else
@@ -130,7 +136,8 @@ order = gets.chomp.downcase
                 order = gets.chomp.downcase
                 order_method(order)
             else
-                puts "Thank you! Your order: #{$qty_ordered} #{$item}." # Does not work
+                puts "Thank you! Your order: #{$qty_ordered} #{$item}." # Does not work # Without $ displays undefined variable
+                puts "Total cost: $#{'%.2f' % (($latte.calc_total)+($scone.calc_total)+($tea.calc_total)).to_s}"
                 puts "Total profit: $#{$latte.calc_profit} for lattes, $#{$scone.calc_profit} for scones & $#{$tea.calc_profit} for tea."
                 abort
             end
