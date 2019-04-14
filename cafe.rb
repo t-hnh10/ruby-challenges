@@ -16,11 +16,11 @@
 #   if they order a scone, add one to the number of scones you need to serve,
 #   if they order a tea, add one to the number of teas you need to make
 
-backlog_hash = {"latte" => 6, "scone" => 2, "tea" => 3}
+backlog_hash = {"latte" => 6, "scone" => 2, "tea" => 3} # Creating initial hash values
 
 puts "Welcome to the Cute Cat Cafe! Please enter your order when you're ready. (options: latte, scone, tea)"
 order = gets.chomp.downcase
-backlog_hash[order] = backlog_hash.fetch(order, 0) + 1
+backlog_hash[order] = backlog_hash.fetch(order, 0) + 1 # Key might not be in hash, using fetch to have 0 then increment and assign back to that key
 puts "You've just ordered a #{order}."
 
 # Print the final order so you know what to make.
