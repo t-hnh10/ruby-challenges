@@ -33,6 +33,25 @@ puts "Final order to make: " + backlog_hash.map { |k, v| "#{v} #{k}(s)" }.join("
 
 # Print out the total profit for the orders you have.
 
+class Ordering
+    attr_accessor :sell_price, :make_price
+    
+    def initialize(sell_price, make_price)
+        @sell_price = sell_price
+        @make_price = make_price
+    end
+
+    def calcProfit
+        return '%.2f' % (sell_price.to_f - make_price.to_f) 
+    end
+end
+
+latte = Ordering.new(4, 2)
+scone = Ordering.new(5, 3)
+tea = Ordering.new(3, 0.50)
+
+puts "Total profit: $#{latte.calcProfit} for lattes, $#{scone.calcProfit} for scones & $#{tea.calcProfit}."
+
 # Part 3
 # Write a program that asks the user for their order.
 # Allow the user to input mutiple items and to specify quantities.
