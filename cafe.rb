@@ -16,8 +16,15 @@
 #   if they order a scone, add one to the number of scones you need to serve,
 #   if they order a tea, add one to the number of teas you need to make
 
-# Print the final order so you know what to make.
+backlog_hash = {"latte" => 6, "scone" => 2, "tea" => 3}
 
+puts "Welcome to the Cute Cat Cafe! Please enter your order when you're ready. (options: latte, scone, tea)"
+order = gets.chomp.downcase
+backlog_hash[order] = backlog_hash.fetch(order, 0) + 1
+puts "You've just ordered a #{order}."
+
+# Print the final order so you know what to make.
+puts "Final order to make: " + backlog_hash.map { |k, v| "#{v} #{k}(s)" }.join(", ")
 
 # Part 2
 # Lattes sell for $4, and cost $2 to make
