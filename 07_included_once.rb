@@ -19,5 +19,19 @@
 #
 
 def included_once (haystack, needle)
-  # Your code here
+  counter = 0
+  # each method to iterate over each item in array
+  haystack.each do |n|
+    if n == needle
+      counter += 1
+    end
+  end
+  
+  if counter == 1
+    return true
+  elsif counter == 0
+    puts "No matches!"
+  else
+    return false
+  end
 end
