@@ -11,7 +11,15 @@
 # ruby tests/08_count_letters_test.rb
 
 def count_letters (string)
-  result = {} # You'll need an empty hash to get started!
+  result = Hash.new(0) # You'll need an empty hash to get started!
+    split_var = string.split("") # Split string & assign to variable
+    
+    split_var.each do |count| # For each element in 'string_split' variable, we assign value to 'count'
+      result[count] += 1      # Add 1 to the 'count' value in hash
+    end
 
-  return result # return the hash
+    return result # return the hash
 end
+
+puts count_letters("hello")
+puts count_letters("mississippi")
