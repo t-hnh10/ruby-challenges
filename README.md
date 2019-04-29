@@ -28,8 +28,14 @@
 * 08_count_letters
 * 09_vowels
 <<<<<<< HEAD
+<<<<<<< HEAD
 * 10_unique
 =======
 * 10_unique
 * 11_fizzbuzz
 >>>>>>> b366d1cd278c93875c0d8baa5a56af178b5d25b1
+=======
+* 10_unique
+* 11_fizzbuzz
+* 12_count_words
+>>>>>>> 937f429a6570923b9196f3610cb404d51c87a14a
