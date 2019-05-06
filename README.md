@@ -29,4 +29,9 @@
 * 09_vowels
 * 10_unique
 * 11_fizzbuzz
+<<<<<<< HEAD
 * 12_count_word
+=======
+* 12_count_words
+* 13_fibonacci
+>>>>>>> eefe86a28a479a1d7de848168244e227a28595bc
