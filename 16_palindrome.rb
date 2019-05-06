@@ -20,8 +20,7 @@
 # ruby tests/16_palindrome_test.rb
 
 def palindrome(string)
-  reverse_string = string.reverse
-  if reverse_string == string
+  if string == string.reverse
     return true
   else
     return false
