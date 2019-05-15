@@ -48,5 +48,8 @@
 # Note : The middle digit(s) are 02.
 
 def balanced_num(number)
-    # Your code goes here
+    number = number.digits
+
+    if number.length % 2 == 0
+    end
 end
