@@ -16,7 +16,7 @@
 #Input: 1254859723 Output: 9875543221
 
 def descending_order(n)
-    # Your code goes here
+    return arr = n.digits.sort.reverse.join.to_i
 end
 
 # Test your code here
