@@ -23,6 +23,21 @@
 # Example input: [2,5,4,8,2]
 # Expected output: [2,2,4,5,8]
 
+
+# Bubble sort
 def sort(num_array)
-    # Your code goes here
+    n = num_array.length
+    loop do
+        # swapped variable becomes true if any swaps made
+        swapped = false
+        (n-1).times do |i|
+            if num_array[i] > num_array[i+1]
+                num_array[i], num_array[i+1] = num_array[i+1], num_array[i]
+                # swapped = true is the termination condition
+                swapped = true
+            end
+        end
+        break if not swapped
+    end
+    num_array
 end
