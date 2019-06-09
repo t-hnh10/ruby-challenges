@@ -26,6 +26,8 @@
 # non-repeat, without checking every other letter?
 
 def first_non_repeating(input)
+    # chars returns an array
+    # find will return enum when block is not false
     input.chars.find { |i| input.count(i) == 1 }
 end
 
