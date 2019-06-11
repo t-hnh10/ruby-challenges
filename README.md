@@ -42,7 +42,4 @@
 * 22_exes_ohs
 * 23_first_non_repeating
 * 24_isogram
-<<<<<<< HEAD
-=======
 * 25_remove_adjacent_duplicates
->>>>>>> 956e44bc9d9466bda375724a73da6f56ae18eb35
