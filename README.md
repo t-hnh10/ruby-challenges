@@ -45,3 +45,7 @@
 * 25_remove_adjacent_duplicates
 * 26_max_min
 * 27_in_array_strict
+<<<<<<< HEAD
+=======
+* 28_good_walk
+>>>>>>> d1590d51523066ffed717893428a7f47ddb00feb
