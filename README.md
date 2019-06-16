@@ -46,4 +46,9 @@
 * 26_max_min
 * 27_in_array_strict
 * 28_good_walk
+<<<<<<< HEAD
 * 29_shortest_walk
+=======
+* 29_shortest_walk
+* 30_spin_words
+>>>>>>> bf5b086647443a270864a96f3cf52b648fd54229
