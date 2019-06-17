@@ -46,15 +46,7 @@
 * 26_max_min
 * 27_in_array_strict
 * 28_good_walk
-<<<<<<< HEAD
-<<<<<<< HEAD
-* 29_shortest_walk
-=======
-* 29_shortest_walk
-* 30_spin_words
->>>>>>> bf5b086647443a270864a96f3cf52b648fd54229
-=======
 * 29_shortest_walk
 * 30_spin_words
 * 31_missing_letter
->>>>>>> f2b33863ae6fe937126f3c6091cac15beffa7874
+* 32_interesting_number
