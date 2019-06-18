@@ -26,6 +26,20 @@
 # has a file name ending in _spec.rb
 
 def good_walk(walk)
-    # your code goes here
+    x = 0
+    y = 0
+    walk.each do |step|
+        if step == 's'
+            x += 1
+        elsif step == 'e'
+            y += 1
+        elsif step == 'w'
+            y -= 1
+        elsif step == 'n'
+            x -= 1
+        else
+            return false
+        end
+    end
+    return true if x == 0 && y == 0
 end
-
