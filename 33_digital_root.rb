@@ -16,5 +16,12 @@
 # Return -1 if any negative argument is provided.
 
 def digital_root(number)
-    # Your code goes here
+    if number <= -1
+        return -1
+    else
+        # digits returns an array, reverse sorted
+        # reduce combines all elements of enum by applying a binary operation, specified by a block or a symbol
+        sum = number.digits.reduce(:+)
+        return sum.digits.reduce(:+)
+    end
 end
