@@ -18,10 +18,12 @@
 def digital_root(number)
     if number <= -1
         return -1
-    else
-        # digits returns an array, reverse sorted
-        # reduce combines all elements of enum by applying a binary operation, specified by a block or a symbol
-        sum = number.digits.reduce(:+)
-        return sum.digits.reduce(:+)
     end
+    
+    # digits returns an array, reverse sorted
+    # reduce combines all elements of enum by applying a binary operation, specified by a block or a symbol
+    while number > 9
+        number = number.digits.reduce(:+)
+    end
+    return number
 end
