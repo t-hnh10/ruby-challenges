@@ -16,5 +16,13 @@
 # interesting_number(3210) => true
 
 def interesting_number(number)
-    # your code goes here
+    number.each_char.map {|c| c.to_i}
+    puts number
 end
+
+
+interesting_number(789) #=> true
+interesting_number(321) #=> true
+interesting_number(798) #=> false
+interesting_number(6) #=> false
+interesting_number(23) #=> false
